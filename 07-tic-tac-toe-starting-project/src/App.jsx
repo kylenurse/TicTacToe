@@ -5,9 +5,12 @@ import { useState } from "react";
 function App() {
 
   const [activePlayer, setActivePlayer] = useState('X');
+  const [gameTurns, setGameTurns] = useState([]);
+
 
   function handleSelectSquare() {
     setActivePlayer((curActivePlayer) => curActivePlayer === 'X' ? 'O' : 'X');
+    setGameTurns();
   }
 
   return (
